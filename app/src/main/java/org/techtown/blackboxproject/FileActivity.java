@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class StreamActivity extends AppCompatActivity {
+public class FileActivity extends AppCompatActivity {
 
     private Button btn_stream;
     private Button btn_file;
@@ -17,7 +17,7 @@ public class StreamActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stream);
+        setContentView(R.layout.activity_file);
 
         btn_stream = findViewById(R.id.btn_stream);
         btn_file = findViewById(R.id.btn_file);
@@ -27,7 +27,7 @@ public class StreamActivity extends AppCompatActivity {
         btn_stream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StreamActivity.this,StreamActivity.class);
+                Intent intent = new Intent(FileActivity.this,StreamActivity.class);
                 startActivity(intent); // 액티비티 이동.
 
             }
@@ -36,7 +36,7 @@ public class StreamActivity extends AppCompatActivity {
         btn_file.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StreamActivity.this,FileActivity.class);
+                Intent intent = new Intent(FileActivity.this,FileActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class StreamActivity extends AppCompatActivity {
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StreamActivity.this,SettingActivity.class);
+                Intent intent = new Intent(FileActivity.this,SettingActivity.class);
                 startActivity(intent);
             }
         });
